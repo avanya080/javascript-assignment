@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
+
+:root {
+  --layout-background: #f0f0f0;
+  --card-background: #ffffff;
+  --block-1-background: #f17d7d;
+  --block-2-background: rgba(255, 230, 0, 0.97);
+  --block-3-background: #46eec6;
+  --card-border-radius: 8px;
+  --tile-border-radius: 8px;
+  --ball-background: linear-gradient(
+    180deg,
+    rgba(248, 178, 62, 0.984844) 0%,
+    rgba(255, 230, 0, 0.97) 100%
+  );
+  --line-color: #8e8c8c;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: var(--layout-background);
+  font-family: "Rubik", sans-serif;
+}
+
+.main {
+  margin: 120px 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-container {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 20px 8px;
+  margin: 0 40px 60px 0;
+  height: 180px;
+  width: 180px;
+  position: relative;
+}
+
+.ten {
+  flex-grow: 1;
+}
+
+.block-1 {
+  color: #ffffff;
+  background: #f17d7d;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 20px;
+}
+
+.block-2 {
+  background: rgba(255, 230, 0, 0.97);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  font-size: 10px;
+}
+
+.block-3 {
+  background: #46eec6;
+  border-radius: 8px;
+  padding: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  text-align: center;
+}
+.ten .block-2 {
+  display: flex;
+  align-items: center;
+}
+.ten::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  top: 80px;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 178, 62, 0.984844) 0%,
+    rgba(255, 230, 0, 0.97) 100%
+  );
+  position: absolute;
+  right: -60px;
+}
